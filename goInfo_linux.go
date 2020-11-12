@@ -25,7 +25,7 @@ func GetInfo() *GoInfoObject {
 }
 
 func _getInfo() string {
-	cmd := exec.Command("uname", "-srio")
+	cmd := exec.Command("uname", "-srmo")
 	cmd.Stdin = strings.NewReader("some input")
 	var out bytes.Buffer
 	var stderr bytes.Buffer
